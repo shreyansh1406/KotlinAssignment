@@ -7,11 +7,11 @@ fun main(args: Array<String>){
 
     print("Enter the nth Number : ")
     val n: Int = sc.nextInt()
-    val myLambda: (Int) -> Unit= {s: Int -> println(s) } //lambda function
-    fact(n,myLambda)
+    val Lambda: (Int) -> Unit= {s: Int -> println(s) }
+    fact(n,Lambda)
 }
-fun fact(a: Int, mylambda: (Int) -> Unit ){
-    var n=1//high level function lambda as parameter
+fun fact(a: Int, lambda: (Int) -> Unit ){
+    var n=1
     for(i in 1..a){n=n*i}
-    mylambda(n) 
+    lambda(n)
 }
